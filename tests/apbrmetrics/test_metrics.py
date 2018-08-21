@@ -23,8 +23,8 @@ class TestMetrics(unittest.TestCase):
 
     def test_field_goals_per_game(self):
         # Lebron James(2003-2004)
-        miniutes_played_per_game = Metrics.field_goals_per_game(622, 79)
-        self.assertEqual(miniutes_played_per_game, 7.9)
+        field_goals_per_game = Metrics.field_goals_per_game(622, 79)
+        self.assertEqual(field_goals_per_game, 7.9)
 
     def test_field_goal_attempts_per_game(self):
         # Lebron James(2003-2004)
@@ -51,7 +51,17 @@ class TestMetrics(unittest.TestCase):
         miniutes_played_per_game = Metrics.three_point_field_goal_percentage(63, 217)
         self.assertEqual(miniutes_played_per_game, 0.290)
 
-    def test_two_point_percentage(self):
+    def test_two_point_field_goals_per_game(self):
         # Lebron James(2003-2004)
-        miniutes_played_per_game = Metrics.two_point_percentage(559, 1275)
+        miniutes_played_per_game = Metrics.two_point_field_goals_per_game(559, 79)
+        self.assertEqual(miniutes_played_per_game, 7.1)
+
+    def test_two_point_field_goal_attempts_per_game(self):
+        # Lebron James(2003-2004)
+        miniutes_played_per_game = Metrics.two_point_field_goal_attempts_per_game(1275, 79)
+        self.assertEqual(miniutes_played_per_game, 16.1)
+
+    def test_two_point_field_goal_percentage(self):
+        # Lebron James(2003-2004)
+        miniutes_played_per_game = Metrics.two_point_field_goal_percentage(559, 1275)
         self.assertEqual(miniutes_played_per_game, 0.438)
