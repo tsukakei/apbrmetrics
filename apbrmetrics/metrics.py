@@ -38,6 +38,47 @@ class Metrics(object):
         return round(float(field_goal_attempts) / games, 1)
 
     @classmethod
+    def field_goal_percentage(cls, field_goals, field_goal_attempts):
+        """
+        Field Goal Percentage; the formula is FG / FGA.
+        :param field_goals: Field Goals
+        :param field_goal_attempts: Field Goal Attempts
+        :return: (float) field_goal_percentage
+        """
+        return round(float(field_goals) / field_goal_attempts, 3)
+
+    @classmethod
+    def three_point_field_goals_per_game(cls, three_point_field_goals, games):
+        """
+        3-Point Field Goals Per Game
+        :param three_point_field_goals: 3-Point Field Goals
+        :param games: Games
+        :return: (float) three_point_field_goals_per_game
+        """
+        return round(float(three_point_field_goals) / games, 1)
+
+    @classmethod
+    def three_point_field_goal_attempts_per_game(cls, three_point_field_goal_attempts, games):
+        """
+        3-Point Field Goal Attempts Per Game
+        :param three_point_field_goal_attempts: 3-Point Field Goal Attempts
+        :param games: Games
+        :return: (float) three_point_field_goal_attempts_per_game
+        """
+        return round(float(three_point_field_goal_attempts) / games, 1)
+
+    @classmethod
+    def three_point_field_goal_percentage(cls, three_point_field_goals, three_point_field_goal_attempts):
+        """
+        3-Point Field Goal Percentage; the formula is FG / FGA.
+        :param three_point_field_goals: 3-Point Field Goals
+        :param three_point_field_goal_attempts: 3-Point Field Goal Attempts
+        :return: (float) three_point_field_goal_percentage
+        """
+        return round(float(three_point_field_goals) / three_point_field_goal_attempts, 3)
+
+
+    @classmethod
     def two_point_percentage(cls, two_point_goals, two_point_attempts):
         """
         2P%: 2-Point Field Goal Percentage; the formula is 2P / 2PA.
